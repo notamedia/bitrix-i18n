@@ -31,5 +31,5 @@ if (Loader::includeModule('notamedia.i18n')) {
 
 ## Requirements
 
-PHP >= 5.4
-Bitrix CMS >= 15.5.10
+* PHP >= 5.4
+* Bitrix CMS >= 15.5.10
