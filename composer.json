@@ -1,0 +1,26 @@
+{
+  "name": "notamedia/bitrix-i18n",
+  "description": "i18n in Bitrix CMS",
+  "keywords": ["bitrix", "i18n", "module"],
+  "homepage": "http://nota.media",
+  "type": "bitrix-module",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/notamedia/bitrix-i18n/issues",
+    "source": "http://github.com/notamedia/bitrix-i18n"
+  },
+  "authors": [
+    {
+      "name": "Nik Samokhvalov",
+      "homepage": "http://samokhvalov.info",
+      "email": "nik@samokhvalov.info"
+    }
+  ],
+  "extra": {
+    "installer-name": "notamedia.i18n"
+  },
+  "require": {
+    "php":">=5.4.0",
+    "composer/installers": "~1"
+  }
+}
