@@ -3,7 +3,7 @@
 Module of internationalization of content in info blocks for Bitrix CMS. Allows you to create multiple language 
 versions of the item with a public ID.
 
-See the screenshots of the interface of internationalization in the wiki.
+See the screenshots of the interface of internationalization in the [wiki](https://github.com/notamedia/bitrix-i18n/wiki).
 
 ## Installation
 
