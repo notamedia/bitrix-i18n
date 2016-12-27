@@ -192,6 +192,10 @@ class InterfaceHelper
         $currentLang = static::getCurrentLang($model);
         $settings = static::getIblockSettings($request->get('IBLOCK_ID'));
 
+        if ($settings === null) {
+            return null;
+        }
+
         $itemVersions = static::getItemVersions($model, $relatedId, $settings);
 
         $rsLangs = LanguageTable::query()
