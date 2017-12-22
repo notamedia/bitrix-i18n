@@ -80,14 +80,15 @@ class ElementHandler
         $propIdPublicId = InterfaceHelper::getPropIdByCode($fields['IBLOCK_ID'], $settings['PROP_CODE_PUBLIC_ID']);
         $propIdLang = InterfaceHelper::getPropIdByCode($fields['IBLOCK_ID'], $settings['PROP_CODE_LANG']);
 
+        if ($action === static::ACTION_ADD) {
+            $publicId = $fields['PROPERTY_VALUES'][$propIdPublicId]['n0']['VALUE'];
+            $langId = $fields['PROPERTY_VALUES'][$propIdLang]['n0']['VALUE'];
+        } else {
+            $publicId = $fields['PROPERTY_VALUES'][$propIdPublicId][$fields['ID'] . ':' . $propIdPublicId]['VALUE'];
+            $langId = $fields['PROPERTY_VALUES'][$propIdLang][$fields['ID'] . ':' . $propIdLang]['VALUE'];
+        }
+
         if ($fields['PROPERTY_VALUES'][$propIdPublicId]) {
-
-            $tmpProperty = array_pop($fields['PROPERTY_VALUES'][$propIdPublicId]);
-            $publicId    = $tmpProperty['VALUE'];
-            $tmpProperty = array_pop($fields['PROPERTY_VALUES'][$propIdLang]);
-            $langId      = $tmpProperty['VALUE'];
-            unset($tmpProperty);
-
             $rsElement = \CIBlockElement::GetList(
                 [],
                 [
